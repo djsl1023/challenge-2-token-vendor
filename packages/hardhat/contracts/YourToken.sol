@@ -6,7 +6,6 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract YourToken is ERC20 {
     constructor() ERC20("Gold", "GLD") {
-        //_mint( ~~~YOUR FRONTEND ADDRESS HERE~~~~ , 1000 * 10 ** 18);
-        _mint(0xF0Bc06e9814C952E90a9EEFa86Fe21B69b795630, 1000 * 10 ** 18);
+        _mint(msg.sender, 1000 * 10 ** 18);
     }
 }
